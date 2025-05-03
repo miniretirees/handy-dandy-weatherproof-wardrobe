@@ -125,10 +125,6 @@ button {
 /* Screen size <376px */
 
 @media (max-width: 375px) {
-  .content {
-    padding: 6px;
-  }
-
   .header {
     padding: 20px 0 0 0;
   }
