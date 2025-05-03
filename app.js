@@ -7,9 +7,6 @@ function getLocation() {
       function (position) {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
-        console.log(
-          "Your location: Latitude " + latitude + " Longitude " + longitude
-        );
         getWeatherForest(latitude, longitude);
       },
       function (error) {
@@ -26,7 +23,6 @@ function getWeatherForest(latitude, longitude) {
   fetch(`/.netlify/functions/weather?latitude=${latitude}&longitude=${longitude}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       weatherData = data;
       displaySummary();
       displayWardrobe();
@@ -86,7 +82,7 @@ function displaySummary() {
   } else if (avgTemp >= 25) {
     tempEmoji = "🥵️";
     tempLabel = "warm";
-  } else if (avgTemp >= 15) {
+  } else if (avgTemp >= 12) {
     tempEmoji = "😊";
     tempLabel = "chilly";
   } else if (avgTemp > 0) {
@@ -106,20 +102,19 @@ function displayWardrobe() {
   let todaysWeatherCondition = weatherData.daily[0].weather[0].main;
   let todaysTemperature = weatherData.daily[0].temp;
   let avgTemp = (todaysTemperature.min + todaysTemperature.max) / 2;
-  console.log(avgTemp);
 
   let topItems = [];
   let bottomItems = [];
   let accessories = [];
 
-  let needsRainjacketCool = avgTemp >= 15 && avgTemp < 25;
+  let needsRainjacketCool = avgTemp >= 12 && avgTemp < 25;
   let needsRainjacketCold = avgTemp < 8
   let needsRainjacketRain = todaysWeatherCondition === "Rain";
 
   if (avgTemp >= 25) {
     topItems.push("🥵️ Short sleeve shirt");
     bottomItems.push("🥵️ Shorts");
-  } else if (avgTemp >= 15) {
+  } else if (avgTemp >= 12) {
     topItems.push("😊 Long sleeve shirt");
     bottomItems.push("😊 Pants");
   } else if (avgTemp >= 8) {
