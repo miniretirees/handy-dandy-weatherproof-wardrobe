@@ -8,10 +8,10 @@
     />
     <title>Handy dandy weatherproof wardrobe</title>
     <link
-    rel="icon"
-    type="image/x-icon"
-    href="images/weatherproof_wardrobe_icon.ico"
-  />
+      rel="icon"
+      type="image/x-icon"
+      href="images/weatherproof_wardrobe_icon.ico"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,42 +22,47 @@
   </head>
   <body>
     <div class="content">
-    <div class="header">
-      <img
+      <div class="header">
+        <img
           src="images/weatherproof_wardrobe_logo.png"
           alt="Weatherproof wardrobe calculator logo"
           width="320px"
         />
+      </div>
+      <div class="summary">
+        <div class="summary-emoji">
+          <h1 id="weather-condition-emoji"></h1>
+          <h1 id="temperature-condition-emoji"></h1>
+        </div>
+        <div class="summary-text">
+          <h2>
+            It’ll be <b id="weather-condition"></b> and
+            <b id="temperature-condition"></b>,<br />
+            between <b id="min-temperature"></b><b>°</b> and
+            <b id="max-temperature"></b><b>°</b>.
+          </h2>
+          <h2 id="chance-of-rain">
+            <b id="precipitation-probability"></b><b>% chance of rain.</b>
+          </h2>
+        </div>
+      </div>
+      <div class="wardrobe">
+        <p>Here's what you might want to wear today:</p>
+        <div class="wardrobe-top">
+          <h6>Top</h6>
+          <ul id="wardrobe-top"></ul>
+        </div>
+        <div class="wardrobe-bottom">
+          <h6>Bottom</h6>
+          <ul id="wardrobe-bottom"></ul>
+        </div>
+        <div class="wardrobe-accessories">
+          <h6>Accessories</h6>
+          <ul id="wardrobe-accessories"></ul>
+        </div>
+        <!--<button>Hourly weather forecast</button>-->
+      </div>
     </div>
-    <div class="summary">
-      <div class="summary-emoji">
-        <h1 id="weather-condition-emoji"></h1>
-        <h1 id="temperature-condition-emoji"></h1>
-      </div>
-      <div class="summary-text">
-        <h2>It’ll be <b id="weather-condition"></b> and <b id="temperature-condition"></b><br> between <b id="min-temperature"></b><b>°</b> and <b id="max-temperature"></b><b>°</b>.</h2>
-        <h2 id="chance-of-rain"><b id="precipitation-probability"></b><b>% chance of rain.</b></h2>
-      </div>
-    </div>
-    <div class="wardrobe">
-      <div class="wardrobe-top">
-        <h6>Top</h6>
-        <ul id="wardrobe-top">
-        </ul>
-      </div>
-      <div class="wardrobe-bottom">
-        <h6>Bottom</h6>
-        <ul id="wardrobe-bottom">
-        </ul>
-      </div>
-      <div class="wardrobe-accessories">
-        <h6>Accessories</h6>
-        <ul id="wardrobe-accessories">
-        </ul>
-      </div>
-      <!--<button>Hourly weather forecast</button>-->
-    </div>
-  </div>
     <script src="app.js"></script>
   </body>
 </html>

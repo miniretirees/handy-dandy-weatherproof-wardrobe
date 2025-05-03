@@ -35,6 +35,12 @@ h6 {
   padding: 8px 12px 0 12px;
 }
 
+p {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 8px 0 0 0;
+}
+
 ul {
   list-style-type: none;
   padding: 2px 12px 8px 8px;
@@ -60,7 +66,7 @@ li {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin: 0 0 16px 0;
+  margin: 16px 0 24px 0;
 }
 
 .summary-emoji {
@@ -135,12 +141,21 @@ button {
   }
   
   h2 {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   h6 {
     font-size: 12px;
   }
+
+  .summary {
+    margin: 12px 0 16px 0;
+  }  
+
+  p {
+    font-size: 14px;
+  }
+
   ul {
     font-size: 14px;
     padding: 2px 8px 6px 8px;
