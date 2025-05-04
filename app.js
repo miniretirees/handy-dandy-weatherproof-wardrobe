@@ -136,7 +136,7 @@ function displayWardrobe() {
   }
 
   if (todaysWeatherCondition === "Clear") {
-    accessories.push("☀️ Sunglasses");
+    accessories.push("☀️ Cap", "☀️ Sunglasses");
   } else if (todaysWeatherCondition === "Rain") {
     accessories.push("🌧️ Umbrella");
   }
